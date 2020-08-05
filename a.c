@@ -3,10 +3,15 @@
 #include <time.h>
 
 int main(){
+    char name[15];
   int num;
   int a=0;
   int b=0;
   srand((unsigned)time(NULL));
+  printf("Who are you?\n");
+  printf("> ");
+  scanf("%s",name);
+  printf("Hello, %s!\n",name);
   printf("Tossing a coin...\n");
   for(int i=1;i<4;i++){
     num=rand()%2;
@@ -20,8 +25,9 @@ int main(){
   }
   printf("Heads: %d, Tails: %d\n",a,b);
   if(a>b){
-    printf("You won\n");
+    printf("%s won!\n",name);
   }else{
-    printf("You lost\n");
+    printf("%s lost!\n",name);
   }
 }
+
